@@ -1,5 +1,11 @@
 # Structure
 
+**Note:** `u8g2` directory has been updated with more fonts in order for BM0 to operate with a typography originally unavailable within the default library. Specifically, `u8g2_font.c`, `u8g2_fonts.c` & `u8g2h.h` have been changed to reflect this.
+
+Github page where fonts are constantly added onto the library (under the "csrc" folder): (https://github.com/olikraus/u8g2/tree/master)
+
+Wiki page listing what each font looks like by pixel size: (https://github.com/olikraus/u8g2/wiki/fntlist99#u8g2-font-list)
+
 - `app-scened-template` - C++ app library
 - `bit_lib`             - library for working with bits/bytes directly
 - `ble_profile`         - BLE Profiles source code

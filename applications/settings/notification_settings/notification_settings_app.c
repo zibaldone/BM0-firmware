@@ -20,11 +20,8 @@ static const NotificationSequence sequence_note_c = {
     NULL,
 };
 
-#define CONTRAST_COUNT 17
+#define CONTRAST_COUNT 11
 const char* const contrast_text[CONTRAST_COUNT] = {
-    "-8",
-    "-7",
-    "-6",
     "-5",
     "-4",
     "-3",
@@ -36,14 +33,8 @@ const char* const contrast_text[CONTRAST_COUNT] = {
     "+3",
     "+4",
     "+5",
-    "+6",
-    "+7",
-    "+8",
 };
 const int32_t contrast_value[CONTRAST_COUNT] = {
-    -8,
-    -7,
-    -6,
     -5,
     -4,
     -3,
@@ -55,47 +46,44 @@ const int32_t contrast_value[CONTRAST_COUNT] = {
     3,
     4,
     5,
-    6,
-    7,
-    8,
 };
 
-#define BACKLIGHT_COUNT 21
+#define BACKLIGHT_COUNT 5
 const char* const backlight_text[BACKLIGHT_COUNT] = {
-    "0%",  "5%",  "10%", "15%", "20%", "25%", "30%", "35%", "40%", "45%",  "50%",
-    "55%", "60%", "65%", "70%", "75%", "80%", "85%", "90%", "95%", "100%",
+    "0%",
+    "25%",
+    "50%",
+    "75%",
+    "100%",
 };
 const float backlight_value[BACKLIGHT_COUNT] = {
-    0.00f, 0.05f, 0.10f, 0.15f, 0.20f, 0.25f, 0.30f, 0.35f, 0.40f, 0.45f, 0.50f,
-    0.55f, 0.60f, 0.65f, 0.70f, 0.75f, 0.80f, 0.85f, 0.90f, 0.95f, 1.00f,
+    0.0f,
+    0.25f,
+    0.5f,
+    0.75f,
+    1.0f,
 };
 
-#define VOLUME_COUNT 21
+#define VOLUME_COUNT 5
 const char* const volume_text[VOLUME_COUNT] = {
-    "0%",  "5%",  "10%", "15%", "20%", "25%", "30%", "35%", "40%", "45%",  "50%",
-    "55%", "60%", "65%", "70%", "75%", "80%", "85%", "90%", "95%", "100%",
+    "0%",
+    "25%",
+    "50%",
+    "75%",
+    "100%",
 };
-const float volume_value[VOLUME_COUNT] = {
-    0.00f, 0.05f, 0.10f, 0.15f, 0.20f, 0.25f, 0.30f, 0.35f, 0.40f, 0.45f, 0.50f,
-    0.55f, 0.60f, 0.65f, 0.70f, 0.75f, 0.80f, 0.85f, 0.90f, 0.95f, 1.00f,
-};
+const float volume_value[VOLUME_COUNT] = {0.0f, 0.25f, 0.5f, 0.75f, 1.0f};
 
-#define DELAY_COUNT 11
+#define DELAY_COUNT 6
 const char* const delay_text[DELAY_COUNT] = {
     "1s",
     "5s",
-    "10s",
     "15s",
     "30s",
     "60s",
-    "90s",
     "120s",
-    "5min",
-    "10min",
-    "30min",
 };
-const uint32_t delay_value[DELAY_COUNT] =
-    {1000, 5000, 10000, 15000, 30000, 60000, 90000, 120000, 300000, 600000, 1800000};
+const uint32_t delay_value[DELAY_COUNT] = {1000, 5000, 15000, 30000, 60000, 120000};
 
 #define VIBRO_COUNT 2
 const char* const vibro_text[VIBRO_COUNT] = {
@@ -139,6 +127,7 @@ const NotificationSequence apply_sequence = {
     NULL,
 };
 
+/*
 static void led_changed(VariableItem* item) {
     NotificationAppSettings* app = variable_item_get_context(item);
     uint8_t index = variable_item_get_current_value_index(item);
@@ -149,6 +138,7 @@ static void led_changed(VariableItem* item) {
     notification_internal_message(app->notification, &apply_sequence);
     notification_message(app->notification, &sequence_blink_white_100);
 }
+*/
 
 static void volume_changed(VariableItem* item) {
     NotificationAppSettings* app = variable_item_get_context(item);
@@ -206,12 +196,14 @@ static NotificationAppSettings* alloc_settings(void) {
     variable_item_set_current_value_index(item, value_index);
     variable_item_set_current_value_text(item, delay_text[value_index]);
 
+    /*
     item = variable_item_list_add(
         app->variable_item_list, "LED Brightness", BACKLIGHT_COUNT, led_changed, app);
     value_index = value_index_float(
         app->notification->settings.led_brightness, backlight_value, BACKLIGHT_COUNT);
     variable_item_set_current_value_index(item, value_index);
     variable_item_set_current_value_text(item, backlight_text[value_index]);
+*/
 
     if(furi_hal_rtc_is_flag_set(FuriHalRtcFlagStealthMode)) {
         item = variable_item_list_add(app->variable_item_list, "Volume", 1, NULL, app);
