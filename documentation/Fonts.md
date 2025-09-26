@@ -17,7 +17,7 @@ The first three files will be for updating the library with more fonts, while <c
 
 ## Step 1: Update the library
 
-Honestly this is a lot easier than it sounds. We're simply downloading the latest copies of [u8g2.h](https://github.com/olikraus/u8g2/blob/master/csrc/u8g2.h), [u8g2_font.c] (https://github.com/olikraus/u8g2/blob/master/csrc/u8g2_font.c) & [u8g2_fonts.c] (https://github.com/olikraus/u8g2/blob/master/csrc/u8g2_fonts.c) and replacing the old files from the stock Flipper Zero's library (again, I've listed where each file's location is above).
+Honestly this is a lot easier than it sounds. We're simply downloading the latest copies of [u8g2.h](https://github.com/olikraus/u8g2/blob/master/csrc/u8g2.h), [u8g2_font.c](https://github.com/olikraus/u8g2/blob/master/csrc/u8g2_font.c) & [u8g2_fonts.c](https://github.com/olikraus/u8g2/blob/master/csrc/u8g2_fonts.c) and replacing the old files from the stock Flipper Zero's library (again, I've listed where each file's location is above).
 
 ## Step 2: Change that font!
 
