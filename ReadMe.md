@@ -5,6 +5,18 @@
 </picture>
 
 # BM0 Firmware
+Basically a reskin of the official Flipper Zero Firmware with BMO assets & some minor add-ons.
+
+## Changes
+```txt
+- Redrew all assets containing the Flipper mascot with BMO
+- Added RGB Backlighting mode (Choose a static backlight color or go with an animated rainbow transition)
+- Changed default font 'u8g2_font_haxrcorp4089_tr' to 'u8g2_font_squeezed_b7_tr' for something more bold
+Note for font: <code>u8g2</code> directory has been updated with more fonts in order for BM0 to operate with a typography originally unavailable within the default library. Specifically, <code>u8g2_font.c</code>, <code>u8g2_fonts.c</code> & <code>u8g2h.h</code> have been changed to reflect this.
+```
+If you want to know how to change your Flipper Zero's font (and upgrade the font libary while you're at it): [Have this doc I wrote just about the topic](/documentation/Fonts.md)
+
+If you want to add BMO-themed animations onto your Flipper Zero, I have some here!: https://github.com/zibaldone/BM0-Animations
 
 ## Cloning source code
 Make sure you have enough space and clone the source code:
@@ -21,7 +33,9 @@ Build firmware using Flipper Build Tool:
 ./fbt
 ```
 
-## Flashing firmware using an in-circuit debugger
+Next, we're going to flash this firmware onto your Flipper Zero:
+
+## Option 1: Flashing firmware using an in-circuit debugger
 
 Connect your in-circuit debugger to your Flipper and flash firmware using Flipper Build Tool:
 
@@ -29,24 +43,13 @@ Connect your in-circuit debugger to your Flipper and flash firmware using Flippe
 ./fbt flash
 ```
 
-## Flashing firmware using USB
+## Option 2: Flashing firmware using USB (aka connecting your Flipper Zero to your computer via a USB cable)
 
 Make sure your Flipper is on, and your firmware is functioning. Connect your Flipper with a USB cable and flash firmware using Flipper Build Tool:
 
 ```shell
 ./fbt flash_usb_full
 ```
-
-## Documentation
-
-- [Flipper Build Tool](/documentation/fbt.md) - building, flashing, and debugging Flipper software
-- [Applications](/documentation/AppsOnSDCard.md), [Application Manifest](/documentation/AppManifests.md) - developing, building, deploying, and debugging Flipper applications
-- [Hardware combos and Un-bricking](/documentation/KeyCombo.md) - recovering your Flipper from the most nasty situations
-- [Flipper File Formats](/documentation/file_formats) - everything about how Flipper stores your data and how you can work with it
-- [Universal Remotes](/documentation/UniversalRemotes.md) - contributing your infrared remote to the universal remote database
-- [Firmware Roadmap](https://miro.com/app/board/uXjVO_3D6xU=/)
-- And much more in the [Developer Documentation](https://developer.flipper.net/flipperzero/doxygen)
-
 # Project structure
 
 - `applications`        - Applications and services used in firmware
@@ -60,3 +63,5 @@ Make sure your Flipper is on, and your firmware is functioning. Connect your Fli
 - `targets`             - Firmware targets: platform specific code
 
 Also, see `ReadMe.md` files inside those directories for further details.
+
+If you thought this was all neat and wanted to donate some dabloons: [Ko-fi](https://ko-fi.com/zackarysanchez)
