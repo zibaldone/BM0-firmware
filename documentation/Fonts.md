@@ -1,8 +1,8 @@
 # Fonts (and how to change them)
 
-The Flipper Zero uses **[U8g2] (https://github.com/olikraus/u8g2)**, a library of fonts for monochrome displays. For stock Flipper Zero firmware, it uses a library version from 2016.
+The Flipper Zero uses **U8g2** (https://github.com/olikraus/u8g2), a library of fonts for monochrome displays. For stock Flipper Zero firmware, it uses a library version from 2016.
 
-BM0-firmware uses the 2025-version of this library not only for a more expansive collection of fonts to choose from, but also to allow the firmware to use a font which didn't exist during the 2016-version: ''.
+BM0-firmware uses the 2025-version of this library not only for a more expansive collection of fonts to choose from, but also to allow the firmware to use a font which didn't exist during the 2016-version:
 
 [Olikraus' wiki list of available fonts as of 2025](https://github.com/olikraus/u8g2/wiki/fntlist8)
 
