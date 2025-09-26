@@ -8,10 +8,11 @@
 Basically a reskin of the official Flipper Zero Firmware with BMO assets & some minor add-ons.
 
 ## Changes
-- Redrew all assets containing the Flipper mascot with BMO
+- Redrew all assets containing the Flipper mascot with BMO.
 - Added RGB Backlighting mode (Choose a static backlight color or go with an animated rainbow transition)
-- Changed default font 'u8g2_font_haxrcorp4089_tr' to 'u8g2_font_squeezed_b7_tr' for something more bold
-Note for font: <code>u8g2</code> directory has been updated with more fonts in order for BM0 to operate with a typography originally unavailable within the default library. Specifically, <code>u8g2_font.c</code>, <code>u8g2_fonts.c</code> & <code>u8g2h.h</code> have been changed to reflect this.
+- Changed default font 'u8g2_font_haxrcorp4089_tr' to 'u8g2_font_squeezed_b7_tr' for something more bold.
+
+* **Note for font**: <code>u8g2</code> directory has been updated with more fonts in order for BM0 to operate with a typography originally unavailable within the default library. Specifically, <code>u8g2_font.c</code>, <code>u8g2_fonts.c</code> & <code>u8g2h.h</code> have been changed to reflect this.
 
 If you want to know how to change your Flipper Zero's font (and upgrade the font libary while you're at it): [Font doc](/documentation/Fonts.md)
 
