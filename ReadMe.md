@@ -9,14 +9,17 @@ Basically a reskin of the official Flipper Zero Firmware with BMO assets & some 
 
 ## Changes
 - Redrew all assets containing the Flipper mascot with BMO.
-- Added RGB Backlighting mode (Choose a static backlight color or go with an animated rainbow transition)
+- Added RGB Backlighting mode (Choose a static backlight color or go with an animated rainbow transition).
 - Changed default font 'u8g2_font_haxrcorp4089_tr' to 'u8g2_font_squeezed_b7_tr' for something more bold.
+- Changed passport name to 'BMO' (of course).
 
 * **Note for font**: <code>u8g2</code> directory has been updated with more fonts in order for BM0 to operate with a typography originally unavailable within the default library. Specifically, <code>u8g2_font.c</code>, <code>u8g2_fonts.c</code> & <code>u8g2h.h</code> have been changed to reflect this.
 
 If you want to know how to change your Flipper Zero's font (and upgrade the font libary while you're at it): [Font doc](/documentation/Fonts.md)
 
-If you want to add BMO-themed animations onto your Flipper Zero, I have some here!: https://github.com/zibaldone/BM0-Animations
+If you want to know how to change your Flipper Zero's passort name: [Passport name doc](/documentation/Passport_name.md)
+
+Also Ii you want to add BMO-themed animations onto your Flipper Zero, I have some here!: https://github.com/zibaldone/BM0-Animations
 
 ## Cloning source code
 Make sure you have enough space and clone the source code:
